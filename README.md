@@ -1,17 +1,30 @@
-# CurrencyRecognitionSystem
-The Currency Recognition System was developed for the purpose of fraud detection in paper currency , so this system is used world wide. The applications of this system can be identified in banking systems, currency monitoring devices, money exchange systems, etc. This system is very important  in the modern world of today and should be available easily in hand. This paper proposes an automatic paper currency recognition system in the form of an application for paper currency. The algorithm implemented is simple, robust and efficient. The approach consists of a number of components including image processing, characteristic extraction and comparing test images with the trained ones. The result produced consists of the denomination of the currency, whether it is actual or forged note and translation of the currency to other countries’ currency. The aim is also to develop a mobile app using the flutter plugin. Flutter is a cross-platform for creating both Android and iOS-based applications. The mobile app created here is well-designed and user-friendly. The performance of the proposed system has been evaluated using a challenging dataset with different constraints . The app is accurate, fast, reliable and low cost in comparison with currently available systems.  
+# Currency Recognition System
 
+Welcome to the Currency Recognition System project! 🌐💰
 
-The detect.py and utils.py files have the backend python code which checks for the fake and valid notes. The system works for all the Indian currency notes.
+This project is designed to recognize and classify different currencies using computer vision techniques. Built using OpenCV for image processing, Flutter for the mobile application, and Flask for the backend server, this system provides a seamless and efficient solution for currency recognition on both mobile and web platforms.
 
-The flask_api.py is the API which send the image from the front end to backend in thr form on string
+## Features
 
-The front end is coded using dart and flutter. The folder lib has dart files which form the mobile app.The pubspec.yaml file has all the necessary modules imported.
+- **Currency Detection**: Automatically detect and recognize the currency denomination from input images.
+- **Classification**: Classify currencies into different categories based on their denominations.
+- **Real-time Recognition**: Perform currency recognition in real-time using the mobile application.
+- **Web Interface**: Access the currency recognition system through a web interface for enhanced usability.
 
-The following section has the explanation of how the backend code works.
+## Technologies Used
 
-Why ORB ?
-ORB is essentially a combination of FAST key point indicator and BRIEF descriptor with numerous adjustments to improve the exhibition. First it utilizes FAST to discover key focuses, at that point apply Harris corner measure to discover top N focuses among them. It likewise utilizes pyramid to deliver multiscale-highlights. In any case, one issue is that, FAST doesn't figure the direction. In this way, shouldn't something be said about pivot invariance. Creators thought of following change. It registers the power weighted centroid of the fix with found corner at focus. The heading of the vector from this corner point to centroid gives the direction. To improve the revolution invariance, minutes are registered with x and y which ought to be in a round locale of span, where is the size of the fix. ORB is a decent choice to SIFT and SURF in calculation cost, coordinating execution and for the most part the licenses. Indeed, SIFT and SURF are licensed and you should pay them for its utilization, however ORB isn't. ORB is essentially a combination of FAST key point indicator and BRIEF descriptor with numerous changes to upgrade the performance. 
+- **OpenCV**: Computer vision library for image processing and currency detection.
+- **Flutter**: Cross-platform framework for building mobile applications.
+- **Flask**: Lightweight web framework for building backend server applications.
+- **Python**: Backend logic and server-side scripting language.
+- **HTML/CSS/JavaScript**: Frontend development technologies for the web interface.
 
-•Brute Force Algorithm
-FAST calculation of nearest neighbors is a functioning region of research in machine learning. The nearest  neighbor search execution includes the brute-force calculation of separations between all sets of focuses in the dataset. BruteForce matcher is a straightforward calculation. For BF matcher, first we need to make the BFMatcher object utilizing cv2.BFMatcher(). It takes two discretionary params. Initial one is normType. It determines the separation estimation to be utilized. As a matter of course, it is cv2.NORM_L2. It is useful for SIFT, SURF and so on. For twofold string-based descriptors like ORB, BRIEF, BRISK and so forth, VTA_K = 3 or 4, cv2.NORM_HAMMING2 ought to be utilized if those are ORB esteems. Second param is Boolean variable, crossCheck which is bogus as a matter of course. In the event that it is valid, Matcher returns just those matches with esteem (i,j) to such an extent that I-th descriptor in set A has j-th descriptor in set B as the best match and the other way around. That is, the two highlights in the two sets should coordinate one another. It gives reliable outcome, and is a decent option in contrast to proportion test proposed by D. Lowe in SIFT paper. When it is made the two significant techniques are BFMatcher.match() and BFMatcher.knnMatch(). Initial one returns the best match.
+## System Architecture
+
+The Currency Recognition System consists of the following components:
+
+- **Mobile Application**: Built using Flutter, the mobile application provides real-time currency recognition capabilities.
+- **Backend Server**: Implemented using Flask, the backend server handles currency recognition requests and communicates with the OpenCV module.
+- **Web Interface**: Allows users to interact with the currency recognition system through a user-friendly web interface.
+
+Let's revolutionize currency recognition with computer vision and modern technologies! 💵🔍
